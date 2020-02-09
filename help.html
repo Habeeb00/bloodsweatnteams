@@ -7,16 +7,51 @@
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
    
+   
 <!-- Make sure you put this AFTER Leaflet's CSS -->
  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
    
+ <style>
+   h1, p {
+  background-color: #DDE0E3;  
+  
+  /* Light gray */
+  padding: 20px 0 20px 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-left: 700px;
+  width: 300px;
+}
+
+em, strong {
+  background-color: #B2D6FF;
+  display: block;
+}
+
+
+   </style>
+   
+<h1>Hackathons Near You</h1>
+
+    <p>Waverley Station.
+	
+	<!-- <em>However</em>, &lt;em&gt; and &lt;strong&gt;
+       elements are not. They are <strong>inline</strong> elements.</p> -->
+
+    <p>George Square</p>
+	   
+   
 </head>
 
 <body>
    
- <div id="mapid" style="width:1250px; height:600px"></div>
+ <div id="mapid" style="width:700px; height:500px; position:absolute; top: 1px;"; ></div>
+ 
+ <div class="boxed">
+   
+</div> 
  
  </body>
   <script>
@@ -30,9 +65,10 @@
 
 
 
-var location1 = [ 55.951675, (-3.190304), "Here's Waverley Station."];
+var location1 = [ 55.951675, (-3.190304), "Waverley Station."];
 	
-var location2 = [55.944056, (-3.188823), "Here's George Square."];
+var location2 = [55.944056, (-3.188823), "George Square."];
+
 	
 	
 var a =[location1, location2]; // Here's the input of the events location.
