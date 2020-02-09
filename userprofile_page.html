@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet"/>
+
+    <title>Profile form</title>
+
+    <style>
+            body {
+                background-color: #545353;
+            }
+
+            .flex-container {
+                border-radius: 15px;
+
+                margin: 3% 10%;
+
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                justify-content: center;
+            }
+
+            div {
+                background-color: #FFFFFF;
+            }
+
+            .input-cont {
+                width: 60wv;
+                padding: 2%;
+                align-content: center;
+                margin: 0;
+            }
+
+            .list-input-cont {
+                width: 60vw;
+                padding: 2%;
+                align-content: center;
+                height: auto;
+                margin: 0;
+            }
+
+            .text-input {
+                width: 100%;
+                padding: 3px;
+                border-radius: 4px;
+            }
+
+            .list-input {
+                padding: 3px;
+                height: 50px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            #website-name {
+                color: #64fa8f;
+                margin-top: 2%;
+                text-align: center;
+                font-size: 3.7em;
+                font-family: 'Exo 2', sans-serif;
+            }
+
+            #form-title {
+                font-family: 'Exo 2', sans-serif;
+                background-color: #FFFFFF;
+                text-align: center;
+            }
+
+            #submit-button-cont {
+                padding: 2%;
+                align-content: right;
+                text-align: right;
+                height: auto;
+                margin-bottom: 3px;
+            }
+
+            #submit-button {
+                 background-color: #64fa8f;
+                 border: none;
+                 border-radius: 2px;
+                 height: 30px;
+                 width: 70px;
+                 color: black;
+                 cursor: pointer;
+            }
+    </style>
+
+</head>
+<body>
+    <h1 id="website-name">teamder</h1>
+    <div class="flex-container">
+        <h2 id="form-title">Fill in your profile</h2>
+        <!-- specify form handler in action -->
+        <form action=" ">
+        <div class="input-cont"> <input type="text" name="fullname" placeholder="Full Name" class="text-input"></div>
+        <div class="input-cont"><input type="text" name="age" placeholder="Age" class="text-input"></div>
+        <div class="input-cont"><input type="text" name="education" placeholder="University/Institution" class="text-input"></div>
+
+        <div class="list-input-cont"><select class="list-input" name="languages" size="4" multiple>
+            <option class="list-option" value="python">Python</option>
+            <option class="list-option" value="java">Java</option>
+            <option class="list-option" value="r">R</option>
+            <option class="list-option" value="ruby">Ruby</option>
+        </select></div>
+
+        <div class="list-input-cont"><select class="list-input" name="interests" size="4" multiple>
+            <option class="list-option"  value="machine learning">Machine Learning</classoption>
+            <option class="list-option" value="physics">Physics</option>
+            <option class="list-option" value="nlp">Natural Language Processing</option>
+            <option class="list-option" value="data analytics">Data Analytics</option>
+        </select></div>
+        <div id="submit-button-cont"><input type="submit" id="submit-button"></div>
+        </form>
+    </div>
+</body>
+</html>
