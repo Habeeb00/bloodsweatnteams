@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Sign up to Teamder</title>
+
+    <style>
+                body {
+            background-color: #545353;
+        }
+
+        #website-name {
+                color: #64fa8f;
+                margin-top: 2%;
+                text-align: center;
+                font-size: 3.7em;
+                font-family: 'Exo 2', sans-serif;
+            }
+
+        #form {
+            margin: 3% 10%;
+
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .input {
+            width: 25%;
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+
+        #signup-button {
+            border: none;
+            cursor: pointer;
+            background-color: #1c1c1c;
+            color: #64fa8f;
+        }
+        p {
+            margin: 3% 10%;
+            font-family: 'Calibri', sans-serif;
+            color: white;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        a {
+            color: #64fa8f;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="website-name">teamder</h1>
+    <div>
+        <form action=" " id="form">
+        <input class="input" type="text" placeholder="Enter Username" name="uname" required>
+        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+        <input class="input"type="password" placeholder="Repeat Password" name="repsw" required>
+        <input class="input"type="submit" id="signup-button" value="Create your account">
+        </form>
+        <p>Already have an account yet? <a href="">Sign in.</a></p>
+    </div>
+</body>
+</html>
