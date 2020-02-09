@@ -1,0 +1,68 @@
+<html>
+
+
+<head>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   
+</head>
+
+<body>
+   
+ <div id="mapid" style="width:1250px; height:600px"></div>
+ 
+ </body>
+  <script>
+ 
+ var mymap = L.map('mapid').setView([55.953251, -3.188267], 13);
+ 
+ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+}).addTo(mymap);
+
+
+
+var location1 = [ 55.951675, (-3.190304), "Here's Waverley Station."];
+	
+var location2 = [55.944056, (-3.188823), "Here's George Square."];
+	
+	
+var a =[location1, location2]; // Here's the input of the events location.
+var i;
+for( i = 0; i < a.length; i++){
+	var marker = L.marker([(a[i])[0], (a[i])[1]]).addTo(mymap);
+	
+	
+	var popup = L.popup()
+		.setLatLng([(a[i])[0], (a[i])[1]])
+		.setContent((a[i])[2])
+		.openOn(mymap);
+		
+	};
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
+
+
+
+ 
+ </script>
+ </html>
+ 
